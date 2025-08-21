@@ -9,4 +9,4 @@ CSV-Import: Kandidaten aus CSV-Dateien hochladen.
 
 Mockaroo-API: Kandidaten-Daten können automatisch generiert werden.
 
-UI: Modernes, responsives Interface mit TailwindCSS + React + Vite.
+UI: Modernes, responsives Interface mit TailwindCSS + Typescript + React + Vite.
