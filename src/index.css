@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root { color-scheme: light; }
+
+  html, body, #root { height: 100%; }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    background:
+      radial-gradient(1200px 600px at -10% -20%, rgba(56, 189, 248, 0.12), transparent 60%),
+      radial-gradient(1000px 500px at 110% 120%, rgba(34, 211, 238, 0.12), transparent 60%),
+      linear-gradient(180deg, #f8fbff 0%, #f6fbfe 60%, #f9fbff 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 { @apply font-semibold; }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-3 py-1.5
+           text-sm font-medium transition select-none;
+  }
+
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-3 py-1.5
+           text-sm font-medium transition select-none
+           border bg-white/70 backdrop-blur hover:bg-white/90;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-3 py-1.5
+           text-sm font-medium transition select-none
+           text-gray-700 hover:bg-white/60;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-3 py-1.5
+           text-sm font-medium transition select-none
+           border border-red-200 bg-red-50 text-red-700 hover:bg-red-100;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-3 py-1.5
+           text-sm font-medium transition select-none text-white shadow
+           bg-gradient-to-r from-sky-600 to-emerald-600
+           hover:from-sky-500 hover:to-emerald-500;
+  }
+
+  .btn-group {
+    @apply inline-flex overflow-hidden rounded-md border border-gray-200 bg-white/70 backdrop-blur shadow-sm;
+  }
+  .btn-group > * { @apply px-3 py-1.5 text-sm font-medium; }
+  .btn-group > * + * { @apply border-l border-gray-200; }
+}
